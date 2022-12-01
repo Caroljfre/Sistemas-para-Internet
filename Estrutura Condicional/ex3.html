@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3</title>
+</head>
+
+<body>
+    <div>
+        <h1>Validação de dados de entrada</h1>
+        <p>Por favor entre com um número entre 1 e 50: <input type="number" name="num" id="num"></p>
+        <p><button onclick="calcular()">Verificar</button></p>
+        <p id="result"></p>
+
+        <script>
+            function calcular() {
+                var num;
+                num = Number(document.getElementById("num").value);
+                if (num >= 1 && num <= 50) {
+                    document.getElementById("result").innerHTML = "Entrada válida";
+
+                }
+                else
+
+                    document.getElementById("result").innerHTML = "Entrada inválida";
+            }
+
+        </script>
+    </div>
+
+</body>
+
+</html>

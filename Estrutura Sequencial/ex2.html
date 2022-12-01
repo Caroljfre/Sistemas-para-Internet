@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2</title>
+</head>
+<body>
+   <div>
+       <h1>Cálculo de área de círculo</h1>
+       <p>Raio <input type="number" name="num" id="num" step="0.1"> cm</p>
+       <p><button onclick="calcular()">calcular</button></p>
+       <p id="result">O resultado aqui</p>
+       <script>
+           function calcular(){
+               var r, area;
+               r = Number(document.getElementById("num").value);
+               area = Math.PI*Math.pow(r,2);
+               document.getElementById("result").innerHTML = "Área = "+area.toFixed(2)+"cm²";
+
+
+           }
+       </script>
+   </div> 
+</body>
+</html>

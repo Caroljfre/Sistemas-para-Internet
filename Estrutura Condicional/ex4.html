@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+</head>
+
+<body>
+    <div>
+        <h1>Exercício 4</h1>
+        <p>Entre com o valor do salário <input type="number" name="num" id="num"></p>
+        <p><button onclick="calcular()">calcular</button></p>
+        <p id="result"></p>
+        <p id="result2"></p>
+        <script>
+            function calcular() {
+            var salarioAtual, aumento, novoSalario;
+            salarioAtual = Number(document.getElementById("num").value);
+
+            if (salarioAtual <= 1700) {
+                aumento = salarioAtual * 0.12;
+                novoSalario = salarioAtual + aumento;
+            } else if (salarioAtual > 1700 && salarioAtual <= 2500) {
+                aumento = salarioAtual * 0.08;
+                novoSalario = salarioAtual + aumento;
+            } else if (salarioAtual > 2500 && salarioAtual <= 3000) {
+                aumento = salarioAtual * 0.05;
+                novoSalario = salarioAtual + aumento;
+            } else {
+                aumento = 0;
+                novoSalario = salarioAtual;
+            }
+            document.getElementById("result").innerHTML = "Valor do aumento: " + aumento + "<br>";
+            document.getElementById("result2").innerHTML = "Novo Salario: " + novoSalario;
+        }
+
+        </script>
+    </div>
+
+</body>
+
+</html>
