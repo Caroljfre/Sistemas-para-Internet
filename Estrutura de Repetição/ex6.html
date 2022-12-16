@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex6</title>
+</head>
+
+<div>
+    <h1>Ex6</h1>
+    <p id="result"></p>
+    <p id="result1"></p>
+
+    <script>
+        var quantAlunos = 0;
+        var num = 0;
+        var soma = 0;
+        var media = 0;
+        var acima7;
+        while (num != -1) {
+            num = parseInt(prompt("Entre com um número: "))
+            quantAlunos = quantAlunos + 1
+            soma += num
+        }
+        if (num > 7)
+        acima7 = acima7 + 1
+
+        media = (soma + 1) / quantAlunos
+        document.getElementById("result").innerHTML = "A média é " + media;
+
+    </script>
+
+
+</div>
