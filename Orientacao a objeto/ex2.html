@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+
+<body>
+    <h2>Perguntas sobre filmes, séries e seus gêneros</h2>
+    <div>
+        Apelido: <br><input style="margin:5px;" type="text" id="apelido" name="apelido" placeholder="Seu apelido"><br>
+        Idade: <br><input style="margin:5px;" type="text" id="idade" name="idade" placeholder="Idade"><br>
+        Quantas horas passa assistindo algo por dia: <br><input style="margin:5px;" type="text" id="horas" name="horas"
+            placeholder="Quantas horas"><br>
+        Selecione o gênero que mais gosta:<br> <select id="genero" name="genero" onchange="gostoGenero()">
+            <option value="">Selecione o gênero</option>
+            <option value="Ação">Ação</option>
+            <option value="Animação">Animação</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Documentário">Documentário</option>
+            <option value="Fantasia">Fantasia</option>
+            <option value="Faroeste-Western">Faroeste-Western</option>
+            <option value="Ficção científica">Ficção científica</option>
+            <option value="Guerra">Guerra</option>
+            <option value="Musicais">Musicais</option>
+            <option value="Romance">Romance</option>
+            <option value="Suspense">Suspense</option>
+            <option value="Terror">Terror</option>
+            <option value="Drama">Drama</option>
+        </select>
+    </div>
+    <button onclick="dadosFilmes()">Enviar</button>
+    <h3>Informações coletadas: </h3>
+    <p> <span id="result"></span> </p>
+
+    <script>
+        function dadosFilmes() {
+            var apelido = document.getElementById("apelido").value;
+            var idade = document.getElementById("idade").value;
+            var genero = document.getElementById("genero").value;
+            var horas = document.getElementById("horas").value;
+            var resultado = ("Apelido:" + apelido + "<br>Idade: " + idade + "<br> Gênero preferido:" + genero + "<br> Quantas horas passa assistindo por dia: " + horas + " horas");
+            document.getElementById("result").innerHTML = resultado;
+        }
+        function gostoGenero() {
+            document.getElementById('genero').value;
+        }
+    </script>
+</body>
+</html>

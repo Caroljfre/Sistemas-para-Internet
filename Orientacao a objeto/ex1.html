@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex1</title>
+</head>
+
+<body>
+    <h1>Avaliação</h1>
+    <div>Nome: <br><input style="margin:5px;" type="text" id="nome" name="nome" placeholder="Nome completo"><br>
+        Email:<br><input style="margin:5px;" type="text" id="email" name="email" placeholder="Seu e-mail"><br>
+        Sexo:
+        <div>
+            <input type="radio" id="sexo" name="masculino" value="masculino">
+            <label for="masculino">Masculino</label>
+        </div>
+        <div>
+            <input type="radio" id="sexo" name="feminino" value="feminino">
+            <label for="feminino">Feminino</label>
+        </div>
+        Endereço: <br><input style="margin:5px;" type="text" id="endereco" name="endereco"
+            placeholder="Informe o seu logradouro"><br>
+        Número:<br><input style="margin:5px;" type="number" id="numero" name="numero"
+            placeholder="Número do seu endereço"><br>
+        Bairro:<br><input style="margin:5px;" type="text" id="bairro" name="bairro" placeholder=" Bairro"><br>
+        Cidade:<br><input style="margin:5px;" type="text" id="cidade" name="cidade" placeholder="Cidade "><br>
+        CEP:<br><input style="margin:5px;" type="number" id="cep" name="cep" placeholder="CEP"><br>
+        UF:<br> <select id="estado" name="estado" onchange="estadosbr()">
+            <option value="">Selecione o Estado (UF)</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espirito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+    </div>
+    <button onclick="dadosPessoais()">Enviar</button>
+    <h3>Resultado: </h3>
+    <p> <span id="result"></span> </p>
+    <script>
+        function dadosPessoais() {
+            var nome = document.getElementById("nome").value;
+            var email = document.getElementById("email").value;
+            var sexo = document.getElementById("sexo").value;
+            var endereco = document.getElementById("endereco").value;
+            var numero = document.getElementById("numero").value;
+            var bairro = document.getElementById("bairro").value;
+            var cidade = document.getElementById("cidade").value;
+            var cep = document.getElementById("cep").value;
+            var estado = document.getElementById('estado').value;
+            var resultado = ("<br>" + nome + " , residente no endereço: " + endereco + ", nº " + numero + ", de CEP: " + cep + ", no bairro " + bairro + ", na cidade de " + cidade + "-  " + estado + ", do sexo " + sexo);
+            document.getElementById("result").innerHTML = resultado;
+        }
+        function estadosbr() {
+            document.getElementById('estado').value;
+        }
+    </script>
+</body>
+
+</html>
