@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex4</title>
+</head>
+
+<body>
+    <h2>Gosto Musical</h2>
+    <script>
+
+        class musica {
+            constructor(nome, musica, banda, estiloMusical, cantor) {
+                this.nome = nome;
+                this.musica = musica;
+                this.banda = banda;
+                this.estiloMusical = estiloMusical;
+                this.cantor = cantor;
+            }
+            dados = function () {
+                return "Seu nome: " + this.nome + "<br> Uma música que goste: " + this.musica + "<br> Uma banda que goste: " + this.banda + "<br> Estilo Musical: " + this.estiloMusical + "<br> Um cantor que goste:" + this.cantor;
+            }
+        }
+
+        var gostoMusical = new musica("Caroline", "Partilhar - Rubel", "Cage the Elephant", "Indie rock", "Adam Lambert");
+        document.write(gostoMusical.dados());
+    </script>
+</body>
+
+</html>

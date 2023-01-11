@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3</title>
+</head>
+
+<body>
+    <h2>Fornecedor</h2>
+    <script>
+
+        class fornecedor {
+            constructor(nomeFornecedor, rua, numeroEndereco, bairro, cidade, estado, CEP, email, CNPJ, dataAberturaEmpresa) {
+                this.nome = nomeFornecedor;
+                this.rua = rua;
+                this.numero = numeroEndereco;
+                this.bairro = bairro;
+                this.cidade = cidade;
+                this.estado = estado;
+                this.cep = CEP;
+                this.email = email;
+                this.cnpj = CNPJ;
+                this.data = dataAberturaEmpresa;
+            }
+            mostraDados = function () {
+                return "Fornecedor: " + this.nome + "<br> Rua: " + this.rua + "<br> Número do local: " + this.numero + "<br> Bairro: " + this.bairro + "<br> Cidade: " + this.cidade + "<br> UF: " + this.estado + "<br> CEP: " + this.cep + "<br> E-mail: " + this.email + "<br> CNPJ: " + this.cnpj + "<br> Abertura da empresa: " + this.data;
+            }
+        };
+
+        var empresa = new fornecedor("Papelaria Caçula", "R. Campo de São Cristóvão", 87, "São Cristóvão", "Rio de Janeiro", "RJ", "20921-440", "sac@cacula.com", "05.214.053/0001-29", "22/07/2002");
+        document.write(empresa.mostraDados());
+    </script>
+</body>
+
+</html>
